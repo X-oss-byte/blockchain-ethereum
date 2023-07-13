@@ -6,12 +6,13 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "Blockchain-Ethereum" branch
   push:
-    branches: [ "Blockchain-Ethereum" ]
+    branches: [ "github" ]
   pull_request:
-    branches: [ "Blockchain-Ethereum" ]
+    branches: [ "Ethereum" ]
 
   # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  workflow_run workflow 'fix issues while running'
+
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
